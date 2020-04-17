@@ -1,5 +1,5 @@
 # Masaga design
-The wex UI basic material design
+The web UI basic material design
 
 试着实现了一套基于 material design 的UI
 
