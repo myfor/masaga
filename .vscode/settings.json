@@ -1,0 +1,13 @@
+{
+    "easysass.targetDir": "./css/",
+    "easysass.formats": [
+        {
+            "format": "expanded",
+            "extension": ".css"
+        },
+        {
+            "format": "compressed",
+            "extension": ".min.css"
+        }
+    ]
+}

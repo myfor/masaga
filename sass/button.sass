@@ -1,0 +1,177 @@
+@import ./variables
+@import ./placeholder
+
+$btn-border: .5px solid 
+$btn-transition: background-color .2s
+
+
+%btn-disabled
+    color: $disabled-color !important
+    box-shadow: none !important
+    cursor: default !important
+    &:hover
+        background: none !important
+%btn-outline-disabled
+    @extend %btn-disabled
+    border: $btn-border $disabled-color !important
+%btn-flat-disabled
+    @extend %btn-disabled
+    background-color: $disabled-color !important
+    &:hover
+        background: $disabled-color !important
+%btn-raised-disabled
+    @extend %btn-flat-disabled
+    &:hover
+        background: $disabled-color !important
+
+//  basic button
+.btn
+    display: inline-block
+    min-width: 36px
+    line-height: 36px
+    font-weight: 900
+    text-align: center
+    cursor: pointer
+    padding: 0 1rem
+    border-radius: 5px
+    border: none
+    background: none
+    text-decoration: none
+    transition: $btn-transition
+    /* Firefox 4 */
+    -moz-transition: $btn-transition
+    /* Safari and Chrome */
+    -webkit-transition: $btn-transition
+    /* Opera */
+    -o-transition: $btn-transition
+
+    $hover-bakcground-color: rgba(0, 0, 0, 0.05)
+    &:hover
+        background-color: $hover-bakcground-color
+    &:active
+        background-color: opacify($hover-bakcground-color, 0.15)
+    &:focus
+        outline: none
+    &:disabled
+        @extend %btn-disabled
+
+.btn-outline
+    @extend .btn
+    border: $btn-border #c5c5c5 
+    &:disabled
+        @extend %btn-outline-disabled
+
+.btn-flat
+    @extend .btn
+    background-color: $basic-color !important
+    &:active
+        background-color: $basic-color - #272727 !important
+    &:disabled
+        @extend %btn-flat-disabled
+    
+.btn-raised
+    @extend .btn, %raised
+    background-color: $basic-color !important
+    &:active
+        background-color: $basic-color - #272727 !important
+    &:disabled
+        @extend %btn-raised-disabled
+
+//  primary button
+.btn-primary
+    @extend .btn
+    color: $primary-color
+    &:hover
+        background-color: transparentize($primary-color, .90)
+    &:active
+        background-color: transparentize($primary-color, .75)
+    &:disabled
+        @extend %btn-disabled
+    
+.btn-outline-primary
+    @extend .btn-primary
+    border: $btn-border $primary-color
+    &:disabled
+        @extend %btn-outline-disabled
+
+.btn-flat-primary
+    @extend .btn-primary
+    color: $basic-color
+    background-color: $primary-color
+    &:hover
+        background-color: $primary-color
+    &:active
+        background-color: transparentize($primary-color, .25)
+    &:disabled
+        @extend %btn-flat-disabled
+
+.btn-raised-primary
+    @extend .btn-flat-primary, %raised
+    &:disabled
+        @extend %btn-raised-disabled
+
+//  accent button
+.btn-accent
+    @extend .btn
+    color: $accent-color
+    &:hover
+        background-color: transparentize($accent-color, .90)
+    &:active
+        background-color: transparentize($accent-color, .75)
+    &:disabled
+        @extend %btn-disabled
+    
+.btn-outline-accent
+    @extend .btn-accent
+    border: $btn-border $accent-color
+    &:disabled
+        @extend %btn-outline-disabled
+
+.btn-flat-accent
+    @extend .btn-accent
+    color: $basic-color
+    background-color: $accent-color
+    &:hover
+        background-color: $accent-color
+    &:active
+        background-color: transparentize($accent-color, .25)
+    &:disabled
+        @extend %btn-flat-disabled
+
+.btn-raised-accent
+    @extend .btn-flat-accent, %raised
+    &:disabled
+        @extend %btn-raised-disabled
+
+//  warn button
+.btn-warn
+    @extend .btn
+    color: $warn-color
+    &:hover
+        background-color: transparentize($warn-color, .90)
+    &:active
+        background-color: transparentize($warn-color, .75)
+    &:disabled
+        @extend %btn-disabled
+    
+.btn-outline-warn
+    @extend .btn-warn
+    border: $btn-border $warn-color
+    &:disabled
+        @extend %btn-outline-disabled
+
+.btn-flat-warn
+    @extend .btn-warn
+    color: $basic-color
+    background-color: $warn-color
+    &:hover
+        background-color: $warn-color
+    &:active
+        background-color: transparentize($warn-color, .25)
+    &:disabled
+        @extend %btn-flat-disabled
+
+.btn-raised-warn
+    @extend .btn-flat-warn, %raised
+    &:disabled
+        @extend %btn-raised-disabled
