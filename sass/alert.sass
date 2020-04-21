@@ -1,0 +1,41 @@
+$alert-z-index: 1001
+
+.alert-overlay-container
+    position: fixed
+    z-index: $alert-z-index
+    pointer-events: none
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+
+.alert-overlay-background
+    opacity: 1
+    background: rgba(0,0,0,.32)
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: $alert-z-index
+    pointer-events: auto
+    transition: opacity .2s cubic-bezier(.25,.8,.25,1)
+
+.alert-wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: $alert-z-index
+    height: 100%
+    width: 100%
+    pointer-events: auto
+
+.alert-box
+    position: static
+    z-index: $alert-z-index
+    padding: 1rem

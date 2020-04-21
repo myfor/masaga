@@ -1,10 +1,9 @@
 .btn-raised, .btn-raised-primary, .btn-raised-accent, .btn-raised-warn {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;
-  transition: box-shadow .2s !important;
 }
 
 .btn-raised:active, .btn-raised-primary:active, .btn-raised-accent:active, .btn-raised-warn:active {
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+  box-shadow: none !important;
 }
 
 .btn-outline:disabled, .btn-outline-primary:disabled, .btn-outline-accent:disabled, .btn-outline-warn:disabled, .btn-raised:disabled, .btn-raised-primary:disabled, .btn-raised-accent:disabled, .btn-raised-warn:disabled, .btn-flat:disabled, .btn-flat-primary:disabled, .btn-flat-accent:disabled, .btn-flat-warn:disabled, .btn:disabled, .btn-primary:disabled, .btn-accent:disabled, .btn-warn:disabled {
