@@ -60,8 +60,20 @@
     </div>
     <hr>
     <div>
-        <button class="btn-raised">显示遮罩层对话框</button>
+        <button class="btn-raised" onclick="showLay()">显示遮罩层对话框</button>
     </div>
-</body>
 
+    <script src="./js/msg-alert.min.js"></script>
+    <script>
+
+        function showLay() {
+            const DD = mAlert.new({
+                content: 'CONTENT',
+                title: 'TITLE',
+                click: () => {alert('hahaha');},
+                clickText: '提交'
+            }).open();
+        }
+    </script>
+</body>
 </html>

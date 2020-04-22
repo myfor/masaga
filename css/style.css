@@ -86,32 +86,32 @@
 }
 
 .btn-primary, .btn-outline-primary, .btn-flat-primary, .btn-raised-primary {
-  color: #3f51b5;
+  color: #3e5cdc;
 }
 
 .btn-primary:hover, .btn-outline-primary:hover, .btn-flat-primary:hover, .btn-raised-primary:hover {
-  background-color: rgba(63, 81, 181, 0.1);
+  background-color: rgba(62, 92, 220, 0.1);
 }
 
 .btn-primary:active, .btn-outline-primary:active, .btn-flat-primary:active, .btn-raised-primary:active {
-  background-color: rgba(63, 81, 181, 0.25);
+  background-color: rgba(62, 92, 220, 0.25);
 }
 
 .btn-outline-primary {
-  border: 0.5px solid #3f51b5;
+  border: 0.5px solid #3e5cdc;
 }
 
 .btn-flat-primary, .btn-raised-primary {
   color: #fff;
-  background-color: #3f51b5;
+  background-color: #3e5cdc;
 }
 
 .btn-flat-primary:hover, .btn-raised-primary:hover {
-  background-color: #3f51b5;
+  background-color: #3e5cdc;
 }
 
 .btn-flat-primary:active, .btn-raised-primary:active {
-  background-color: rgba(63, 81, 181, 0.75);
+  background-color: rgba(62, 92, 220, 0.75);
 }
 
 .btn-accent, .btn-outline-accent, .btn-flat-accent, .btn-raised-accent {
@@ -170,4 +170,88 @@
 
 .btn-flat-warn:active, .btn-raised-warn:active {
   background-color: rgba(244, 67, 54, 0.75);
+}
+
+.alert-overlay-container {
+  position: fixed;
+  z-index: 1001;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: display .5s;
+}
+
+.alert-overlay-background {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.32);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  pointer-events: auto;
+  transition: opacity 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.alert-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.alert-box {
+  position: static;
+  z-index: 1001;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  min-width: 200px;
+  max-width: 400px;
+  overflow-wrap: break-word;
+  pointer-events: auto;
+}
+
+.alert-box-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-top: .8rem;
+}
+
+.alert-box-body {
+  padding: 1rem 0;
+}
+
+.alert-box-actions {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+html {
+  font-size: 14px;
+}
+
+.ml1 {
+  margin-left: .33rem !important;
+}
+
+.ml2 {
+  margin-left: .66rem !important;
+}
+
+.ml3 {
+  margin-left: 1rem !important;
 }

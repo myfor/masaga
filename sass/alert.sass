@@ -8,6 +8,7 @@ $alert-z-index: 1001
     left: 0
     height: 100%
     width: 100%
+    transition: display .5s
 
 .alert-overlay-background
     opacity: 1
@@ -33,9 +34,29 @@ $alert-z-index: 1001
     z-index: $alert-z-index
     height: 100%
     width: 100%
-    pointer-events: auto
+    pointer-events: none
 
 .alert-box
     position: static
     z-index: $alert-z-index
     padding: 1rem
+    display: flex
+    flex-direction: column
+    background-color: white
+    border-radius: 5px
+    min-width: 200px
+    max-width: 400px
+    overflow-wrap: break-word
+    pointer-events: auto
+
+.alert-box-header
+    font-size: 1.5rem
+    font-weight: 600
+    padding-top: .8rem
+
+.alert-box-body
+    padding: 1rem 0
+
+.alert-box-actions
+    display: flex
+    flex-direction: row-reverse
