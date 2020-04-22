@@ -65,8 +65,8 @@
     <hr>
     <div>
         <div class="dropdown-group">
-            <button class="btn-raised dropdown">下拉框</button>
-            <ul class="dropdown-menu">
+            <button class="btn-raised dropdown" id="ddl-template" data-toggle="dropdown" aria-label="dropdownlist">下拉框</button>
+            <ul class="dropdown-menu" data-for="ddl-template">
                 <li class="dropdorw-item">select</li>
             </ul>
         </div>
@@ -76,19 +76,14 @@
     <script>
 
         appendLoad(() => {
-            // document.onclick = function(event) {
-            //     let x = event.clientX;
-            //     let y = event.clientY;
-            //     let o = document.elementFromPoint(x, y);
-            //     console.log(o.nodeName + ' -- ' + o.className)
-            // }
+            ddl.init();
         });
 
         function showLay() {
             const DD = mAlert.new({
                 content: 'CONTENT',
                 title: 'TITLE',
-                click: () => {alert('hahaha');},
+                click: () => {alert('hahaha'); DD.close()},
                 clickText: '提交'
             }).open();
         }

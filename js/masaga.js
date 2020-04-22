@@ -75,6 +75,7 @@ class mAlert {
         if (this._click) {
             const BTN_CLICK = this.DOC.createElement('button');
             BTN_CLICK.className = 'btn-flat-primary ml1';
+            BTN_CLICK.onclick = this._click;
             BTN_CLICK.innerText = this._clickText;
             DIV_ACTIONS.appendChild(BTN_CLICK);
         }
@@ -113,5 +114,50 @@ class mAlert {
      */
     close() {
         this.DOC.body.removeChild(this._box);
+    }
+}
+
+/**
+ * 下拉菜单
+ */
+class ddl {
+
+    _ddlMenu = null;
+
+    static init() {
+        const CURRENT_CLICK = document.onclick;
+        if (typeof CURRENT_CLICK === 'function')
+            document.onclick = function () {
+                CURRENT_CLICK();
+                ddl._clickBackgroudFn(event);
+            }
+        else
+            document.onclick = function () {
+                ddl._clickBackgroudFn(event);
+            }
+    }
+
+    static _clickBackgroudFn(event) {
+        let x = event.clientX;
+        let y = event.clientY;
+        let ele = document.elementFromPoint(x, y);
+        //  点击到下拉菜单之外的元素，收起下拉框
+        if (ele && ele.getAttribute('data-toggle') === 'dropdown')
+            return;
+        let ddlEles = document.querySelectorAll('[data-toggle=dropdown]');
+        if (!ddlEles)
+            return;
+        for (let i = 0; i < ddlEles.length; i++) {
+            const e = ddlEles[i];
+            const P = e.parentNode;
+            if (P && P.childElementCount > 1) {
+                let child = P.firstElementChild;
+                while (child) {
+                    if (child.getAttribute('data-for') === e.id)
+                        child.style.display = 'none';
+                    child = child.nextElementSibling;
+                }
+            }
+        }
     }
 }
