@@ -62,9 +62,27 @@
     <div>
         <button class="btn-raised-primary" onclick="showLay()">显示提示弹窗</button>
     </div>
+    <hr>
+    <div>
+        <div class="dropdown-group">
+            <button class="btn-raised dropdown">下拉框</button>
+            <ul class="dropdown-menu">
+                <li class="dropdorw-item">select</li>
+            </ul>
+        </div>
+    </div>
 
-    <script src="./js/msg-alert.min.js"></script>
+    <script src="./js/masaga.js"></script>
     <script>
+
+        appendLoad(() => {
+            // document.onclick = function(event) {
+            //     let x = event.clientX;
+            //     let y = event.clientY;
+            //     let o = document.elementFromPoint(x, y);
+            //     console.log(o.nodeName + ' -- ' + o.className)
+            // }
+        });
 
         function showLay() {
             const DD = mAlert.new({
