@@ -93,18 +93,24 @@ class mAlert {
 
     }
 
+    /**
+     * 实例化提示弹窗
+     * @param {配置参数} config {title: '标题', content: '内容', click: '新的按钮方法体', clickText: '按钮文本'}
+     */
     static new(config) {
         return new mAlert(config);
     }
     /**
-     * 打开弹窗
+     * 打开提示弹窗
      */
     open() {
         this.DOC.body.appendChild(this._box);
         this._box.style.display = 'block'
         return this;
     }
-
+    /**
+     * 关闭提示弹窗
+     */
     close() {
         this.DOC.body.removeChild(this._box);
     }
