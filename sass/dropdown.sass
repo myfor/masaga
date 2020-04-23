@@ -1,17 +1,35 @@
 @import ./variables
-    
+
+%dropdown-divider
+    height: 0
+    margin: .5rem 0
+    overflow: hidden
+    border-top: 1px solid #e9ecef
+
+%dropdown-menu
+    display: none
+    position: absolute
+    z-index: 10
+    list-style-type: none
+    padding: .5rem 0
+    background-color: #fff
+    margin: 11px 0 0 0
+    border: 1px solid #b9b9b9
+    border-radius: 5px
+
+%dropdorw-item
+    padding: .5rem 1rem
+    cursor: pointer
+    &:hover
+        background-color: #e9ecef
+
 .dropdown-group
+    position: relative
     &>.dropdown
         
+    //  左对齐
     &>.dropdown-menu
-        display: none
-        position: absolute
-        list-style-type: none
-        padding: .5rem 0
-        background-color: #fff
-        margin: 14px 0 0 0
-        border: 1px solid #b9b9b9
-        border-radius: 5px
+        @extend %dropdown-menu
         &::after
             width: 0px
             height: 0px
@@ -33,12 +51,35 @@
             left: 5px
             top: -20px
         &>hr
-            height: 0
-            margin: .5rem 0
-            overflow: hidden
-            border-top: 1px solid #e9ecef
+            @extend %dropdown-divider
         &>.dropdorw-item
-            padding: .5rem 1rem
-            cursor: pointer
-            &:hover
-                background-color: #e9ecef
+            @extend %dropdorw-item
+
+    //  右对齐
+    &>.dropdown-menu-right
+        @extend %dropdown-menu
+        right: 0
+        &::after
+            width: 0px
+            height: 0px
+            border-width: 10px
+            border-style: solid
+            border-color: transparent transparent #fff transparent
+            position: absolute
+            content: ' '
+            right: 5px
+            top: -19px
+        &::before
+            width: 0px
+            height: 0px
+            border-width: 10px
+            border-style: solid
+            border-color: transparent transparent #b9b9b9 transparent
+            position: absolute
+            content: ' '
+            right: 5px
+            top: -20px
+        &>hr
+            @extend %dropdown-divider
+        &>.dropdorw-item
+            @extend %dropdorw-item
