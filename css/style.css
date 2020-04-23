@@ -172,6 +172,14 @@
   background-color: rgba(244, 67, 54, 0.75);
 }
 
+.dropdown-group > .dropdown-menu {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  padding: 0;
+  background-color: #fff;
+}
+
 .alert-overlay-container {
   position: fixed;
   z-index: 1001;

@@ -121,11 +121,26 @@ class mAlert {
  * 下拉菜单
  */
 class ddl {
-
-    _ddlMenu = null;
-
+    /**
+     * 背景点击事件，初始化时加载
+     */
+    static _clickBackgroudFn = null;
+    /**
+     * 是否已经初始化过下拉框，不需要重复初始化
+     */
+    static _isInit = false;
     static init() {
+        if (!this._isInit)
+            this._isInit = true;
+        else
+             return;
+
+        //  点击按钮展开事件
+
+
+        //  点击背景时的关闭事件
         const CURRENT_CLICK = document.onclick;
+        ddl._clickBackgroudFn = new ddl().clickBackgroudFn;
         if (typeof CURRENT_CLICK === 'function')
             document.onclick = function () {
                 CURRENT_CLICK();
@@ -137,7 +152,7 @@ class ddl {
             }
     }
 
-    static _clickBackgroudFn(event) {
+    clickBackgroudFn(event) {
         let x = event.clientX;
         let y = event.clientY;
         let ele = document.elementFromPoint(x, y);
