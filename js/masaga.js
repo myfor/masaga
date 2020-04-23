@@ -4,8 +4,9 @@
  * @param {方法体} fn () => {...}
  */
 function appendLoad(fn) {
-    if (!fn)
+    if (!fn) {
         return;
+    }
     const CURRENT_ONLOAD_FN = window.onload;
     if (typeof CURRENT_ONLOAD_FN !== 'function')
         window.onload = fn;
@@ -133,7 +134,9 @@ class ddl {
      * 是否已经初始化过下拉框，不需要重复初始化
      */
     static _isInit = null;
-
+    /**
+     * 初始化下拉菜单
+     */
     static init() {
         if (!this._isInit)
             this._isInit = true;
@@ -147,7 +150,7 @@ class ddl {
 
         //  点击背景时的关闭事件
         const CURRENT_CLICK = document.onclick;
-        ddl._clickBackgroudFn = newDDL.clickBackgroudFn;
+        ddl._clickBackgroudFn = newDDL.bindClickBackgroudFn;
         if (typeof CURRENT_CLICK === 'function')
             document.onclick = function () {
                 CURRENT_CLICK();
@@ -159,7 +162,9 @@ class ddl {
             }
         newDDL = null;
     }
-
+    /**
+     * 绑定下拉框按钮点击展开事件
+     */
     bindDropDownListButtonClickFn() {
         const ddlList = document.querySelectorAll('[data-toggle=dropdown]');
         for (let i = 0; i < ddlList.length; i++) {
@@ -182,8 +187,10 @@ class ddl {
             }
         }
     }
-
-    clickBackgroudFn(event) {
+    /**
+     * 绑定点击背景的方法
+     */
+    bindClickBackgroudFn(event) {
         let x = event.clientX;
         let y = event.clientY;
         let ele = document.elementFromPoint(x, y);

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>masaga</title>
 
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./dist/css/style.min.css">
 </head>
 
 <body style="background-color: #f9f9f9;">
@@ -81,30 +81,16 @@
             </ul>
         </div>
     </div>
-    <br>
-    <div class="d-flex">
-        <div class="dropdown-group">
-            <button class="btn-raised dropdown" id="ddl-template1" data-toggle="dropdown" aria-label="dropdownlist">下拉框</button>
-            <ul class="dropdown-menu" data-for="ddl-template1">
-                <li class="dropdorw-item">select</li>
-                <hr>
-                <li class="dropdorw-item">selectselect</li>
-            </ul>
-        </div>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <div class="dropdown-group">
-            <button class="btn-raised dropdown" id="ddl-template2" data-toggle="dropdown" aria-label="dropdownlist">下拉框</button>
-            <ul class="dropdown-menu-right" data-for="ddl-template2">
-                <li class="dropdorw-item">select</li>
-                <li class="dropdorw-item">selectselect</li>
-            </ul>
-        </div>
+    <hr>
+    <div>
+
     </div>
 
     <script src="./js/masaga.js"></script>
     <script>
 
         appendLoad(() => {
+            //  使用下拉菜单需要初始化
             ddl.init();
         });
 

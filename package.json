@@ -1,0 +1,24 @@
+{
+  "name": "masaga",
+  "version": "1.0.0",
+  "description": "a web ui basic material design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myfor/masaga.git"
+  },
+  "keywords": [
+    "masaga"
+  ],
+  "author": "myfor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/myfor/masaga/issues"
+  },
+  "homepage": "https://github.com/myfor/masaga#readme",
+  "devDependencies": {},
+  "dependencies": {}
+}
