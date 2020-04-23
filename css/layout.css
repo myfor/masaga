@@ -13,3 +13,7 @@ html {
 .ml3 {
   margin-left: 1rem !important;
 }
+
+.d-flex {
+  display: flex;
+}

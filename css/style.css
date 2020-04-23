@@ -178,9 +178,33 @@
   list-style-type: none;
   padding: .5rem 0;
   background-color: #fff;
-  margin: 0;
+  margin: 14px 0 0 0;
   border: 1px solid #b9b9b9;
   border-radius: 5px;
+}
+
+.dropdown-group > .dropdown-menu::after {
+  width: 0px;
+  height: 0px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  content: ' ';
+  left: 5px;
+  top: -19px;
+}
+
+.dropdown-group > .dropdown-menu::before {
+  width: 0px;
+  height: 0px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #b9b9b9 transparent;
+  position: absolute;
+  content: ' ';
+  left: 5px;
+  top: -20px;
 }
 
 .dropdown-group > .dropdown-menu > hr {
@@ -282,4 +306,8 @@ html {
 
 .ml3 {
   margin-left: 1rem !important;
+}
+
+.d-flex {
+  display: flex;
 }
