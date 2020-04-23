@@ -2,6 +2,24 @@
   display: none;
   position: absolute;
   list-style-type: none;
-  padding: 0;
+  padding: .8rem 0;
   background-color: #fff;
+  margin: 0;
+  border: 1px solid #b9b9b9;
+  border-radius: 5px;
+}
+
+.dropdown-group > .dropdown-menu > hr {
+  height: 0;
+  margin: .5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
+
+.dropdown-group > .dropdown-menu > .dropdorw-item {
+  padding: .3rem 1rem;
+}
+
+.dropdown-group > .dropdown-menu > .dropdorw-item:hover {
+  background-color: #e9ecef;
 }

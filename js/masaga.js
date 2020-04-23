@@ -126,21 +126,28 @@ class ddl {
      */
     static _clickBackgroudFn = null;
     /**
+     * 下拉框点击事件，初始化时加载
+     */
+    static _clickDDLFn = null;
+    /**
      * 是否已经初始化过下拉框，不需要重复初始化
      */
-    static _isInit = false;
+    static _isInit = null;
+
     static init() {
         if (!this._isInit)
             this._isInit = true;
         else
-             return;
+            return;
 
-        //  点击按钮展开事件
+        let newDDL = new ddl();
 
+        //  绑定点击按钮展开事件
+        newDDL.bindDropDownListButtonClickFn();
 
         //  点击背景时的关闭事件
         const CURRENT_CLICK = document.onclick;
-        ddl._clickBackgroudFn = new ddl().clickBackgroudFn;
+        ddl._clickBackgroudFn = newDDL.clickBackgroudFn;
         if (typeof CURRENT_CLICK === 'function')
             document.onclick = function () {
                 CURRENT_CLICK();
@@ -150,6 +157,30 @@ class ddl {
             document.onclick = function () {
                 ddl._clickBackgroudFn(event);
             }
+        newDDL = null;
+    }
+
+    bindDropDownListButtonClickFn() {
+        const ddlList = document.querySelectorAll('[data-toggle=dropdown]');
+        for (let i = 0; i < ddlList.length; i++) {
+            const BTN = ddlList[i];
+            const P = BTN.parentNode;
+            if (P.childElementCount <= 1)
+                continue;
+            let c = P.firstElementChild;
+            while (c) {
+                if (c.getAttribute('data-for') === BTN.id) {
+                    BTN.onclick = function () {
+                        if (c.style.display === 'none' || !c.style.display)
+                            c.style.display = 'block';
+                        else
+                            c.style.display = 'none';
+                    }
+                    break;
+                }
+                c = c.nextElementSibling;
+            }
+        }
     }
 
     clickBackgroudFn(event) {
