@@ -65,7 +65,7 @@
     <hr>
     <div class="d-flex">
         <div class="dropdown-group">
-            <button class="btn-raised dropdown" id="ddl-template1" data-toggle="dropdown" aria-label="dropdownlist">下拉框</button>
+            <button class="btn-raised dropdown" id="ddl-template1" data-toggle="dropdown" aria-label="dropdownlist">左对齐下拉框</button>
             <ul class="dropdown-menu" data-for="ddl-template1">
                 <li class="dropdorw-item">select</li>
                 <hr>
@@ -74,7 +74,23 @@
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <div class="dropdown-group">
-            <button class="btn-raised dropdown" id="ddl-template2" data-toggle="dropdown" aria-label="dropdownlist">下拉框</button>
+            <button class="btn-raised dropdown" id="ddl-template2" data-toggle="dropdown" aria-label="dropdownlist">右对齐下拉框</button>
+            <ul class="dropdown-menu-right" data-for="ddl-template2">
+                <li class="dropdorw-item">select</li>
+                <li class="dropdorw-item">selectselect</li>
+            </ul>
+        </div>
+        <div class="dropdown-group">
+            <button class="btn-raised dropdown" id="ddl-template1" data-toggle="dropdown" aria-label="dropdownlist">左对齐下拉框</button>
+            <ul class="dropdown-menu" data-for="ddl-template1">
+                <li class="dropdorw-item">select</li>
+                <hr>
+                <li class="dropdorw-item">selectselect</li>
+            </ul>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="dropdown-group">
+            <button class="btn-raised dropdown" id="ddl-template2" data-toggle="dropdown" aria-label="dropdownlist">右对齐下拉框</button>
             <ul class="dropdown-menu-right" data-for="ddl-template2">
                 <li class="dropdorw-item">select</li>
                 <li class="dropdorw-item">selectselect</li>
@@ -99,7 +115,8 @@
                 content: 'CONTENT',
                 title: 'TITLE',
                 click: () => {alert('hahaha'); DD.close()},
-                clickText: '提交'
+                clickText: '提交',
+                clickClass: 'btn-flat-primary'
             }).open();
         }
     </script>

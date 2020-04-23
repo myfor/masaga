@@ -28,6 +28,7 @@ class mAlert {
     _title = '';
     _click = null;
     _clickText = '确定';
+    _clickClass = 'btn-flat-primary'
     constructor(config) {
         if (config) {
             if (config.content)
@@ -38,6 +39,8 @@ class mAlert {
                 this._click = config.click;
             if (config.clickText)
                 this._clickText = config.clickText;
+            if (config.clickClass)
+                this._clickClass = config.clickClass
         }
 
         this._buildBox();
@@ -75,7 +78,8 @@ class mAlert {
 
         if (this._click) {
             const BTN_CLICK = this.DOC.createElement('button');
-            BTN_CLICK.className = 'btn-flat-primary ml1';
+            BTN_CLICK.className = 'ml1';
+            BTN_CLICK.classList.add(this._clickClass);
             BTN_CLICK.onclick = this._click;
             BTN_CLICK.innerText = this._clickText;
             DIV_ACTIONS.appendChild(BTN_CLICK);
