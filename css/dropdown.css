@@ -2,7 +2,7 @@
   display: none;
   position: absolute;
   list-style-type: none;
-  padding: .8rem 0;
+  padding: .5rem 0;
   background-color: #fff;
   margin: 0;
   border: 1px solid #b9b9b9;
@@ -17,7 +17,8 @@
 }
 
 .dropdown-group > .dropdown-menu > .dropdorw-item {
-  padding: .3rem 1rem;
+  padding: .5rem 1rem;
+  cursor: pointer;
 }
 
 .dropdown-group > .dropdown-menu > .dropdorw-item:hover {
