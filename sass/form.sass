@@ -2,6 +2,12 @@
 @import ./placeholder
 
 $no-selected-color: #929292
+$transition-s: .5s
+%input-transition
+    transition: box-shadow $transition-s
+    -moz-transition: box-shadow $transition-s
+    -webkit-transition: box-shadow $transition-s
+    -o-transition: box-shadow $transition-s
 
 %input
     width: 100%
@@ -10,16 +16,14 @@ $no-selected-color: #929292
     font-size: 1.1rem
     padding: .4rem
     border-radius: 5px
+    @extend %input-transition
 
 %input-focus
     border-top: none
     border-left: none
     border-right: none
     @extend %box-shadow
-    transition: all 0.2s
-    -moz-transition: all 0.2s
-    -webkit-transition: all 0.2s
-    -o-transition: all 0.2s
+    @extend %input-transition
 
 //  表单
     
@@ -28,8 +32,9 @@ $no-selected-color: #929292
     border: 1px solid $no-selected-color
     &:focus
         @extend %input-focus
-        outline: none
         @extend %box-shadow
+        outline: transparent
+        border-bottom: 2px solid $no-selected-color
 
 .form-input-primary
     @extend %input

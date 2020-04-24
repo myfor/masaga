@@ -86,6 +86,7 @@ close()
 以使用分割线
 
 ### 输入框
+单行输入框
 ```html
 <input class="form-input mr3" type="text" placeholder="输入框">
 <br><br>
@@ -95,3 +96,8 @@ close()
 <br><br>
 <input class="form-input-warn mr3" type="text" placeholder="输入框">
 ```
+多行输入框
+```html
+<textarea class="form-input-primary" autoRows></textarea>
+```
+添加 **autoRows** 可以启用行数根据内容自适应

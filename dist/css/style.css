@@ -361,6 +361,13 @@ html {
   box-shadow: none !important;
 }
 
+.form-input, .form-input-primary, .form-input-accent, .form-input-warn, .form-input:focus, .form-input-primary:focus, .form-input-accent:focus, .form-input-warn:focus {
+  transition: box-shadow 0.5s;
+  -moz-transition: box-shadow 0.5s;
+  -webkit-transition: box-shadow 0.5s;
+  -o-transition: box-shadow 0.5s;
+}
+
 .form-input, .form-input-primary, .form-input-accent, .form-input-warn {
   width: 100%;
   height: auto;
@@ -374,10 +381,6 @@ html {
   border-top: none;
   border-left: none;
   border-right: none;
-  transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
 }
 
 .form-input {
@@ -385,7 +388,8 @@ html {
 }
 
 .form-input:focus {
-  outline: none;
+  outline: transparent;
+  border-bottom: 2px solid #929292;
 }
 
 .form-input-primary {
