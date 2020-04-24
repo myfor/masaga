@@ -45,6 +45,7 @@ const box = mAlert.new({
             })
 ```
 #### 参数说明：
+```javascript
 {
     content: '提示内容',
     title: '提示标题',
@@ -52,6 +53,7 @@ const box = mAlert.new({
     clickText: '按钮的文本',
     clickClass: 按钮的样式，默认为 'btn-flat-primary'
 }
+```
 
 #### function
 
