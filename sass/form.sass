@@ -14,11 +14,11 @@ $transition-s: .5s
     height: auto
     line-height: 1.5
     font-size: 1.1rem
-    padding: .4rem
+    padding: .4rem .5rem
     border-radius: 5px
     @extend %input-transition
 
-%input-focus
+%form-focus
     border-top: none
     border-left: none
     border-right: none
@@ -31,8 +31,7 @@ $transition-s: .5s
     @extend %input
     border: 1px solid $no-selected-color
     &:focus
-        @extend %input-focus
-        @extend %box-shadow
+        @extend %form-focus
         outline: transparent
         border-bottom: 2px solid $no-selected-color
 
@@ -40,7 +39,7 @@ $transition-s: .5s
     @extend %input
     border: 1px solid $primary-color
     &:focus
-        @extend %input-focus
+        @extend %form-focus
         outline: $primary-color
         border-bottom: 2px solid $primary-color
         
@@ -48,7 +47,7 @@ $transition-s: .5s
     @extend %input
     border: 1px solid $accent-color
     &:focus
-        @extend %input-focus
+        @extend %form-focus
         outline: $accent-color
         border-bottom: 2px solid $accent-color
         
@@ -56,6 +55,28 @@ $transition-s: .5s
     @extend %input
     border: 1px solid $warn-color
     &:focus
-        @extend %input-focus
+        @extend %form-focus
         outline: $warn-color
         border-bottom: 2px solid $warn-color
+
+
+%form
+    border-radius: 5px
+    width: 100%
+    padding: .4rem
+    height: 2.2rem
+    // appearance: none
+    // -moz-appearance: none
+    // -webkit-appearance: none
+    @extend %input-transition
+
+.form-select
+    @extend %form
+    border: 1px solid $primary-color
+    &:focus
+        @extend %form-focus
+        outline: $primary-color
+        border-bottom: 2px solid $primary-color
+    &>option
+        padding: .3rem .4rem
+        background-color: #fff

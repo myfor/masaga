@@ -6,7 +6,7 @@
     overflow: hidden
     border-top: 1px solid #b9b9b9
 
-%up-triangle
+%triangle
     width: 0px
     height: 0px
     border-width: 10px
@@ -49,7 +49,7 @@
     &>.dropdown-menu
         @extend %dropdown-menu
         &::after
-            @extend %up-triangle
+            @extend %triangle
             border-color: transparent transparent #fff transparent
             left: 5px
             top: -19px
@@ -73,12 +73,12 @@
         @extend %dropdown-menu
         right: 0
         &::after
-            @extend %up-triangle
+            @extend %triangle
             border-color: transparent transparent #fff transparent
             right: 5px
             top: -19px
         &::before
-            @extend %up-triangle
+            @extend %triangle
             border-color: transparent transparent #b9b9b9 transparent
             right: 5px
             top: -20px

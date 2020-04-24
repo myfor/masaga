@@ -14,6 +14,7 @@ clone and open the index.html to see the result of the completed component on br
 - 提示弹窗
 - 下拉菜单
 - 输入框
+- 下拉框
 
 ## Usage
 导入 js 文件和 css 文件
@@ -111,3 +112,12 @@ close()
 <textarea class="form-input-primary" autoRows></textarea>
 ```
 添加 **autoRows** 可以启用行数根据内容自适应
+
+### 下拉框
+```html
+<select class="form-select">
+    <option value="">OPTION</option>
+    <option value="1">OPTION1</option>
+    <option value="2">OPTION2</option>
+</select>
+```
