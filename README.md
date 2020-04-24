@@ -17,7 +17,7 @@ clone and open the index.html to see the result of the completed component on br
 
 ## Usage
 导入 js 文件和 css 文件
-```
+```html
 <link rel="stylesheet" href="./dist/css/style.min.css">
 <script src="./js/masaga.js"></script>
 ```
@@ -86,7 +86,7 @@ close()
 以使用分割线
 
 ### 输入框
-```
+```html
 <input class="form-input mr3" type="text" placeholder="输入框">
 <br><br>
 <input class="form-input-primary mr3" type="text" placeholder="输入框">
