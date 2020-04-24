@@ -1,0 +1,23 @@
+html {
+  font-size: 14px;
+}
+
+.ml1 {
+  margin-left: .33rem !important;
+}
+
+.ml2 {
+  margin-left: .66rem !important;
+}
+
+.ml3 {
+  margin-left: 1rem !important;
+}
+
+.mr3 {
+  margin-right: 1rem !important;
+}
+
+.d-flex {
+  display: flex;
+}

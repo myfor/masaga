@@ -13,6 +13,7 @@ clone and open the index.html to see the result of the completed component on br
 - 按钮
 - 提示弹窗
 - 下拉菜单
+- 输入框
 
 ## Usage
 导入 js 文件和 css 文件
@@ -20,7 +21,6 @@ clone and open the index.html to see the result of the completed component on br
 <link rel="stylesheet" href="./dist/css/style.min.css">
 <script src="./js/masaga.js"></script>
 ```
-*这里的 js 文件我不会压缩*
 
 ### 全局方法
 appendLoad(() => {
@@ -84,3 +84,14 @@ close()
 <hr>
 ```
 以使用分割线
+
+### 输入框
+```
+<input class="form-input mr3" type="text" placeholder="输入框">
+<br><br>
+<input class="form-input-primary mr3" type="text" placeholder="输入框">
+<br><br>
+<input class="form-input-accent mr3" type="text" placeholder="输入框">
+<br><br>
+<input class="form-input-warn mr3" type="text" placeholder="输入框">
+```

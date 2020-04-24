@@ -99,10 +99,16 @@
     </div>
     <hr>
     <div>
-
+        <input class="form-input mr3" type="text" placeholder="输入框">
+        <br><br>
+        <input class="form-input-primary mr3" type="text" placeholder="输入框">
+        <br><br>
+        <input class="form-input-accent mr3" type="text" placeholder="输入框">
+        <br><br>
+        <input class="form-input-warn mr3" type="text" placeholder="输入框">
     </div>
 
-    <script src="./js/masaga.js"></script>
+    <script src="./dist/js/masaga.min.js"></script>
     <script>
 
         appendLoad(() => {
@@ -116,7 +122,7 @@
                 title: 'TITLE',
                 click: () => {alert('hahaha'); DD.close()},
                 clickText: '提交',
-                clickClass: 'btn-flat-primary'
+                clickClass: 'btn-flat-warn'
             }).open();
         }
     </script>

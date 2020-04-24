@@ -1,0 +1,56 @@
+@import ./variables
+@import ./placeholder
+
+$no-selected-color: #929292
+
+%input
+    width: 100%
+    height: auto
+    line-height: 1.5
+    font-size: 1.1rem
+    padding: .4rem
+    border-radius: 5px
+
+%input-focus
+    border-top: none
+    border-left: none
+    border-right: none
+    @extend %box-shadow
+    transition: all 0.2s
+    -moz-transition: all 0.2s
+    -webkit-transition: all 0.2s
+    -o-transition: all 0.2s
+
+//  表单
+    
+.form-input
+    @extend %input
+    border: 1px solid $no-selected-color
+    &:focus
+        @extend %input-focus
+        outline: none
+        @extend %box-shadow
+
+.form-input-primary
+    @extend %input
+    border: 1px solid $primary-color
+    &:focus
+        @extend %input-focus
+        outline: $primary-color
+        border-bottom: 2px solid $primary-color
+        
+.form-input-accent
+    @extend %input
+    border: 1px solid $accent-color
+    &:focus
+        @extend %input-focus
+        outline: $accent-color
+        border-bottom: 2px solid $accent-color
+        
+.form-input-warn
+    @extend %input
+    border: 1px solid $warn-color
+    &:focus
+        @extend %input-focus
+        outline: $warn-color
+        border-bottom: 2px solid $warn-color
