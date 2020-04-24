@@ -79,6 +79,12 @@ close()
         <li class="dropdorw-item">selectselect</li>
     </ul>
 </div>
+<script>
+    appendLoad(() => {
+        //  初始化下拉框
+        ddl.init();
+    });
+</script>
 ```
 下拉框菜单的属性 **data-for** 的值需要与下拉框按钮的 id 相同，id为必需的。
 下拉框菜单的 **class="dropdown-menu"** 为左对齐的下拉框菜单
