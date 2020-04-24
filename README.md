@@ -23,9 +23,11 @@ clone and open the index.html to see the result of the completed component on br
 ```
 
 ### 全局方法
+```javascript
 appendLoad(() => {
     //  要执行的方法
 });
+```
 将传入的方法体在 **window.onload** 执行，多次使用会将按顺序执行。
 
 ### 按钮
