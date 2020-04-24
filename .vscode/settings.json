@@ -1,0 +1,4 @@
+{
+    "easysass.targetDir": "./dist/css/",
+    "es6-css-minify.jsMinPath": "./dist/js/"
+}
