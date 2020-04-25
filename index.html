@@ -65,7 +65,8 @@
     <hr>
     <div class="d-flex">
         <div class="dropdown-group">
-            <button class="btn-raised dropdown" id="ddl-template1" data-toggle="dropdown" aria-label="dropdownlist">左对齐下拉框</button>
+            <button class="btn-raised dropdown" id="ddl-template1" data-toggle="dropdown"
+                aria-label="dropdownlist">左对齐下拉框</button>
             <ul class="dropdown-menu" data-for="ddl-template1">
                 <li class="dropdorw-item">select</li>
                 <hr>
@@ -74,14 +75,16 @@
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <div class="dropdown-group">
-            <button class="btn-raised dropdown" id="ddl-template2" data-toggle="dropdown" aria-label="dropdownlist">右对齐下拉框</button>
+            <button class="btn-raised dropdown" id="ddl-template2" data-toggle="dropdown"
+                aria-label="dropdownlist">右对齐下拉框</button>
             <ul class="dropdown-menu-right" data-for="ddl-template2">
                 <li class="dropdorw-item">select</li>
                 <li class="dropdorw-item">selectselect</li>
             </ul>
         </div>
         <div class="dropdown-group">
-            <button class="btn-raised dropdown" id="ddl-template1" data-toggle="dropdown" aria-label="dropdownlist">左对齐下拉框</button>
+            <button class="btn-raised dropdown" id="ddl-template1" data-toggle="dropdown"
+                aria-label="dropdownlist">左对齐下拉框</button>
             <ul class="dropdown-menu" data-for="ddl-template1">
                 <li class="dropdorw-item">select</li>
                 <hr>
@@ -90,7 +93,8 @@
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <div class="dropdown-group">
-            <button class="btn-raised dropdown" id="ddl-template2" data-toggle="dropdown" aria-label="dropdownlist">右对齐下拉框</button>
+            <button class="btn-raised dropdown" id="ddl-template2" data-toggle="dropdown"
+                aria-label="dropdownlist">右对齐下拉框</button>
             <ul class="dropdown-menu-right" data-for="ddl-template2">
                 <li class="dropdorw-item">select</li>
                 <li class="dropdorw-item">selectselect</li>
@@ -112,11 +116,27 @@
         <textarea class="form-input-primary" id="txt_area" autoRows placeholder="多行输入框"></textarea>
     </div>
     <hr>
-    <select class="form-select">
-        <option value="">OPTION</option>
-        <option value="1">OPTION1</option>
-        <option value="2">OPTION2</option>
-    </select>
+    <div>
+        <select class="form-select">
+            <option value="">OPTION</option>
+            <option value="1">OPTION1</option>
+            <option value="2">OPTION2</option>
+        </select>
+    </div>
+    <div>
+        <input class="form-radio" type="radio" name="single" id="rad">
+        <label for="rad">单选框 1</label>
+
+        <input class="form-radio" type="radio" name="single" id="rad-1">
+        <label for="rad-1">单选框 2</label>
+    </div>
+    <div>
+        <input class="form-radio" type="radio" name="single2" id="rad2">
+        <label for="rad2">单选框 1</label>
+
+        <input class="form-radio" type="radio" name="single2" id="rad2-1">
+        <label for="rad2-1">单选框 2</label>
+    </div>
 
     <div>
         <br><br><br><br><br><br><br><br>
@@ -124,7 +144,6 @@
 
     <script src="./dist/js/masaga.min.js"></script>
     <script>
-
         appendLoad(() => {
             //  使用下拉菜单需要初始化
             ddl.init();
@@ -134,11 +153,15 @@
             const DD = mAlert.new({
                 content: 'CONTENT',
                 title: 'TITLE',
-                click: () => {alert('hahaha'); DD.close()},
+                click: () => {
+                    alert('hahaha');
+                    DD.close()
+                },
                 clickText: '提交',
-                clickClass: 'btn-flat-warn'
+                clickClass: 'btn-raised-primary'
             }).open();
         }
     </script>
 </body>
+
 </html>

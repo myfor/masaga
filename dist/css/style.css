@@ -439,3 +439,51 @@ html {
   padding: .3rem .4rem;
   background-color: #fff;
 }
+
+.form-radio {
+  cursor: pointer;
+  opacity: 0;
+  margin: 10px 5px;
+}
+
+.form-radio:focus {
+  box-shadow: 0 0 6px blue;
+}
+
+.form-radio + label {
+  cursor: pointer;
+  position: relative;
+  margin-left: .5rem;
+}
+
+.form-radio + label::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: -24px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #929292;
+}
+
+.form-radio + label::after {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 5px;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+}
+
+.form-radio:checked + label::before {
+  border-color: #3e5cdc;
+}
+
+.form-radio:checked + label::after {
+  background-color: #3e5cdc;
+  transform: scale(1);
+  transition: all .3s;
+}

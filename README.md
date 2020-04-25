@@ -15,6 +15,7 @@ clone and open the index.html to see the result of the completed component on br
 - 下拉菜单
 - 输入框
 - 下拉框
+- 单选框
 
 ## Usage
 导入 js 文件和 css 文件
@@ -120,4 +121,12 @@ close()
     <option value="1">OPTION1</option>
     <option value="2">OPTION2</option>
 </select>
+```
+
+### 单选框
+```html
+<input class="form-radio" type="radio" name="single" id="rad">
+<label for="rad">单选框 1</label>
+<input class="form-radio" type="radio" name="single" id="rad-1">
+<label for="rad-1">单选框 2</label>
 ```

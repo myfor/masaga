@@ -80,3 +80,42 @@ $transition-s: .5s
     &>option
         padding: .3rem .4rem
         background-color: #fff
+
+    
+.form-radio
+    cursor: pointer
+    opacity: 0
+    margin: 10px 5px
+    &:focus
+        box-shadow: 0 0 6px blue
+    &+label
+        cursor: pointer
+        position: relative
+        margin-left: .5rem
+        &::before
+            content: ''
+            position: absolute
+            top: 1px
+            left: -24px
+            border-radius: 50%
+            width: 16px
+            height: 16px
+            border: 2px solid $no-selected-color
+        &::after
+            content: ''
+            position: absolute
+            left: -20px
+            top: 5px
+            border-radius: 50%
+            width: 12px
+            height: 12px
+            background-color: transparent
+    &:checked 
+      + label 
+        &::before 
+          border-color: $primary-color
+        &::after 
+          background-color: $primary-color
+          // 缩放动效，放大到正常大小
+          transform: scale(1)
+          transition: all .3s
