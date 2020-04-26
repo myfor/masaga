@@ -60,18 +60,19 @@ $transition-s: .5s
         border-bottom: 2px solid $warn-color
 
 
-%form
+%form-select
     border-radius: 5px
     width: 100%
     padding: .4rem
     height: 2.2rem
+    background-color: $basic-color
     // appearance: none
     // -moz-appearance: none
     // -webkit-appearance: none
     @extend %input-transition
 
 .form-select
-    @extend %form
+    @extend %form-select
     border: 1px solid $primary-color
     &:focus
         @extend %form-focus
@@ -81,6 +82,13 @@ $transition-s: .5s
         padding: .3rem .4rem
         background-color: #fff
 
+//  单选框动画
+$radio-transition-s: .3s
+%radio-transition
+    transition: box-shadow $radio-transition-s
+    -moz-transition: box-shadow $radio-transition-s
+    -webkit-transition: box-shadow $radio-transition-s
+    -o-transition: box-shadow $radio-transition-s
     
 .form-radio
     cursor: pointer
@@ -112,10 +120,12 @@ $transition-s: .5s
         + label
             &::before
                 box-shadow: 0 0 1px 6px rgba(62, 92, 220, 0.3)
-                transition: box-shadow .3s
-                -moz-transition: box-shadow .3s
-                -webkit-transition: box-shadow .3s
-                -o-transition: box-shadow .3s
+                @extend %radio-transition
+    &:active
+        + label
+            &::before
+                box-shadow: 0 0 1px 6px rgba(62, 92, 220, 0.3)
+                @extend %radio-transition
     &:checked 
       + label 
         &::before 
