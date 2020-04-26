@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'AlibabaSans-Medium';
+  src: url("../font/AlibabaSans-Medium.otf");
+}
+
+* {
+  font-family: AlibabaSans-Medium;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .btn-raised, .btn-raised-primary, .btn-raised-accent, .btn-raised-warn, .form-input:focus, .form-input-primary:focus, .form-input-accent:focus, .form-input-warn:focus, .form-select:focus {
   box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;
 }

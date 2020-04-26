@@ -10,6 +10,7 @@ clone and open the index.html to see the result of the completed component on br
 
 ## 已有组件
 - 全局方法
+- 字体
 - 按钮
 - 提示弹窗
 - 下拉菜单
@@ -31,6 +32,9 @@ appendLoad(() => {
 });
 ```
 将传入的方法体在 **window.onload** 执行，多次使用会将按顺序执行。
+
+### 字体
+字体使用的是阿里巴巴普惠体，是允许免费使用的字体。
 
 ### 按钮
 待说明
