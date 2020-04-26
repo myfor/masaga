@@ -83,12 +83,12 @@ $transition-s: .5s
         background-color: #fff
 
 //  单选框动画
-$radio-transition-s: .3s
-%radio-transition
-    transition: box-shadow $radio-transition-s
-    -moz-transition: box-shadow $radio-transition-s
-    -webkit-transition: box-shadow $radio-transition-s
-    -o-transition: box-shadow $radio-transition-s
+$box-transition-s: .3s
+%box-transition
+    transition: box-shadow $box-transition-s
+    -moz-transition: box-shadow $box-transition-s
+    -webkit-transition: box-shadow $box-transition-s
+    -o-transition: box-shadow $box-transition-s
     
 .form-radio
     cursor: pointer
@@ -120,12 +120,12 @@ $radio-transition-s: .3s
         + label
             &::before
                 box-shadow: 0 0 1px 6px transparentize($primary-color, .7)
-                @extend %radio-transition
+                @extend %box-transition
     &:active
         + label
             &::before
                 box-shadow: 0 0 1px 6px transparentize($primary-color, .7)
-                @extend %radio-transition
+                @extend %box-transition
     &:checked 
       + label 
         &::before 
@@ -169,3 +169,22 @@ $radio-transition-s: .3s
           border-color: $warn-color
         &::after 
           background-color: $warn-color
+
+
+.form-checkout
+    cursor: pointer
+    opacity: 0
+    margin: 10px 5px
+    &+label
+        cursor: pointer
+        position: relative
+        margin-left: .5rem
+        &::before
+            content: ''
+            position: absolute
+            top: 1px
+            left: -24px
+            border-radius: 3px
+            width: 16px
+            height: 16px
+            border: 2px solid $no-selected-color
