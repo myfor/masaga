@@ -12,6 +12,7 @@
 <body style="background-color: #f9f9f9;">
     <div class="text-center">
         <h1>masaga design</h1>
+        <h2>按钮</h2>
         <div>
             <button class="btn">按钮</button>
             &nbsp;&nbsp;&nbsp;&nbsp;
@@ -60,9 +61,11 @@
     </div>
     <hr>
     <div>
+        <h2>提示弹窗</h2>
         <button class="btn-raised-primary" onclick="showLay()">显示提示弹窗</button>
     </div>
     <hr>
+    <h2>下拉框</h2>
     <div class="d-flex">
         <div class="dropdown-group">
             <button class="btn-raised dropdown" id="ddl-template1" data-toggle="dropdown"
@@ -102,6 +105,7 @@
         </div>
     </div>
     <hr>
+    <h2>输入框</h2>
     <div>
         <input class="form-input mr3" type="text" placeholder="输入框">
         <br><br>
@@ -116,6 +120,7 @@
         <textarea class="form-input-primary" id="txt_area" autoRows placeholder="多行输入框"></textarea>
     </div>
     <hr>
+    <h2>选择框</h2>
     <div>
         <select class="form-select">
             <option value="">OPTION</option>
@@ -123,20 +128,19 @@
             <option value="2">OPTION2</option>
         </select>
     </div>
+    <hr>
+    <h2>单选框</h2>
     <div>
-        <input class="form-radio" type="radio" name="single" id="rad">
-        <label for="rad">单选框 1</label>
+        <input class="form-radio" type="radio" name="single" id="rad-primary">
+        <label for="rad-primary">单选框 primary</label>
 
-        <input class="form-radio" type="radio" name="single" id="rad-1">
-        <label for="rad-1">单选框 2</label>
+        <input class="form-radio-accent" type="radio" name="single" id="rad-accent">
+        <label for="rad-accent">单选框 accent</label>
+        
+        <input class="form-radio-warn" type="radio" name="single" id="rad-warn">
+        <label for="rad-warn">单选框 warn</label>
     </div>
-    <div>
-        <input class="form-radio" type="radio" name="single2" id="rad2">
-        <label for="rad2">单选框 1</label>
-
-        <input class="form-radio" type="radio" name="single2" id="rad2-1">
-        <label for="rad2-1">单选框 2</label>
-    </div>
+    
 
     <div>
         <br><br><br><br><br><br><br><br>
