@@ -30,8 +30,15 @@
     padding: .5rem 1rem
     cursor: pointer
     &:hover
-        background-color: $primary-color
-        color: #fff
+        background-color: rgba(0,0,0,.13)
+        color: #000
+    &:active
+        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.5)
+        background-color: $basic-color
+        transition: box-shadow .1s
+        -moz-transition: box-shadow .1s
+        -webkit-transition: box-shadow .1s
+        -o-transition: box-shadow .1s
 
 .dropdown-group
     position: relative

@@ -182,9 +182,44 @@ $box-transition-s: .3s
         &::before
             content: ''
             position: absolute
-            top: 1px
+            top: 3px
             left: -24px
             border-radius: 3px
-            width: 16px
-            height: 16px
+            width: 14px
+            height: 14px
             border: 2px solid $no-selected-color
+    &:checked+label::before
+        content: '\2714'
+        color: #fff
+        line-height: 1
+        padding: 0 0 1px 2px
+        background-color: $primary-color
+        border: 1px solid $primary-color
+        transition: all $box-transition-s
+        -moz-transition: all $box-transition-s
+        -webkit-transition: all $box-transition-s
+        -o-transition: all $box-transition-s
+    &:checked:focus+label::before
+        box-shadow: 0 0 1px 6px transparentize($primary-color, .7)
+    &:active+label::before
+        box-shadow: 0 0 1px 6px transparentize($primary-color, .7)
+
+.form-checkout-accent
+    @extend .form-checkout
+    &:checked+label::before
+        background-color: $accent-color
+        border: 1px solid $accent-color
+    &:checked:focus+label::before
+        box-shadow: 0 0 1px 6px transparentize($accent-color, .7)
+    &:active+label::before
+        box-shadow: 0 0 1px 6px transparentize($accent-color, .7)
+
+.form-checkout-warn
+    @extend .form-checkout
+    &:checked+label::before
+        background-color: $warn-color
+        border: 1px solid $warn-color
+    &:checked:focus+label::before
+        box-shadow: 0 0 1px 6px transparentize($warn-color, .7)
+    &:active+label::before
+        box-shadow: 0 0 1px 6px transparentize($warn-color, .7)

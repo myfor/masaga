@@ -134,3 +134,20 @@ close()
 <input class="form-radio" type="radio" name="single" id="rad-1">
 <label for="rad-1">单选框 2</label>
 ```
+样式默认是 primary，要使用其他样式请使用
+```html
+class="form-radio-accent"
+class="form-radio-warn"
+```
+
+### 多选框
+```html
+<input class="form-checkout" type="checkbox" name="multi" id="c-primary">
+<label for="c-primary">多选框 primary</label>
+```
+样式默认是 primary，要使用其他样式请使用
+```html
+class="form-checkout-accent"
+class="form-checkout-warn"
+```
+
