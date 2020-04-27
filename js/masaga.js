@@ -254,10 +254,33 @@ class accordion {
             this._isInit = true;
         else
             return;
+        console.log('init accordion');
+
         const accordions = document.querySelectorAll('div[data-toggle=accordion]');
         if (accordions.length === 0)
             return;
-        
+
+        for (let i = 0; i < accordions.length; i++) {
+            const panel = accordions[i];
+            panel.onclick = function () {
+                const body = panel.nextElementSibling;
+                if (body.className === 'panel-body') {
+                    if (body.style.maxHeight && body.style.maxHeight !== '0px') {
+                        body.style.maxHeight = '0px';
+                    } else {
+                        body.style.maxHeight = '500px';
+                    }
+                    for (let j = 0; j < accordions.length; j++) {
+                        const o = accordions[j];
+                        if (j === i) continue;
+                        const obody = o.nextElementSibling;
+                        if (obody.style.maxHeight && obody.style.maxHeight !== '0px') {
+                            obody.style.maxHeight = '0px';
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -17,6 +17,8 @@ clone and open the index.html to see the result of the completed component on br
 - 输入框
 - 下拉框
 - 单选框
+- 多选框
+- 折叠面板
 
 ## Usage
 导入 js 文件和 css 文件
@@ -151,3 +153,29 @@ class="form-checkout-accent"
 class="form-checkout-warn"
 ```
 
+### 折叠面板
+```html
+<div class="accordion">
+    <div class="panel">
+        <div class="panel-header" data-toggle="accordion">
+            <div class="panel-header-title">标题</div>
+            <div class="panel-header-description">描述</div>
+            <div class="panel-header-icon">图标</div>
+        </div>
+        <div class="panel-body">
+            <div class="panel-content">
+                CONTENT
+            </div>
+            <div class="panel-actions">
+                <button class="btn-accent">按钮</button>
+                <button class="btn-primary">按钮</button>
+            </div>
+        </div>
+    </div>
+</div>
+```
+要使用其他主题颜色可以将
+**class="panel"** 改为
+- **class="panel-primary"**
+- **class="panel-accent"**
+- **class="panel-warn"**
