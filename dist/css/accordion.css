@@ -14,7 +14,6 @@
 .accordion > .panel > .panel-header, .accordion > .panel-primary > .panel-header, .accordion > .panel-accent > .panel-header, .accordion > .panel-warn > .panel-header {
   display: flex;
   flex-direction: row;
-  width: 100%;
   cursor: pointer;
   padding: .7rem 1rem;
   background-color: transparent;
