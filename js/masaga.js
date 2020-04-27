@@ -81,7 +81,7 @@ class mAlert {
         DIV_HEADER.innerText = this._title;
         const DIV_BODY = this.DOC.createElement('div');
         DIV_BODY.className = 'alert-box-body';
-        DIV_BODY.innerText = this._content;
+        DIV_BODY.innerHTML = this._content;
 
         const DIV_ACTIONS = this.DOC.createElement('div');
         DIV_ACTIONS.className = 'alert-box-actions';
