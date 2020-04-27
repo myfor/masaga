@@ -223,3 +223,52 @@ $box-transition-s: .3s
         box-shadow: 0 0 1px 6px transparentize($warn-color, .7)
     &:active+label::before
         box-shadow: 0 0 1px 6px transparentize($warn-color, .7)
+
+
+%switch-transition
+    transition: all $box-transition-s
+    -moz-transition: all $box-transition-s
+    -webkit-transition: all $box-transition-s
+    -o-transition: all $box-transition-s
+
+.switch-primary
+    opacity: 0
+    position: relative
+    cursor: pointer
+    margin: 0 0 15px 35px
+    &+label
+        cursor: pointer
+        position: relative
+    &+label::before
+        content: ''
+        cursor: pointer
+        position: absolute
+        top: 5px
+        left: -48px
+        border-radius: 15px
+        width: 40px
+        height: 15px
+        background-color: $disabled-color
+        @extend %switch-transition
+    &:checked+label::before
+        background: transparentize($primary-color, .3)
+        @extend %switch-transition
+    &+label::after
+        content: ''
+        cursor: pointer
+        position: absolute
+        left: -52px
+        border-radius: 15px
+        width: 24px
+        height: 24px
+        background-color: $basic-color
+        box-shadow: 0 3px 1px -1px rgba(0,0,0,.2)
+        @extend %switch-transition
+    &+label:active::after
+        box-shadow: 0 0 0 10px transparentize($primary-color, .8)
+    &:checked+label::after
+        background-color: $primary-color
+        left: -30px
+        @extend %switch-transition
+    &:focus+label::after
+        box-shadow: 0 0 0 10px transparentize($primary-color, .8)
