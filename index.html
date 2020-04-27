@@ -155,7 +155,7 @@
     <div>
         <div class="accordion">
             <div class="panel">
-                <div class="panel-header">
+                <div class="panel-header" data-toggle="accordion">
                     <div class="panel-header-title">标题</div>
                     <div class="panel-header-description">描述</div>
                     <div class="panel-header-icon">图标</div>
@@ -165,33 +165,41 @@
                 </div>
             </div>
             <div class="panel">
-                <div class="panel-header">
+                <div class="panel-header" data-toggle="accordion">
                     <div class="panel-header-title primary">标题</div>
                     <div class="panel-header-description">描述</div>
                     <div class="panel-header-icon">图标</div>
                 </div>
                 <div class="panel-body">
-
+                    THE BODY
+                    THE BODY
                 </div>
             </div>
             <div class="panel">
-                <div class="panel-header">
+                <div class="panel-header" data-toggle="accordion">
                     <div class="panel-header-title">标题</div>
                     <div class="panel-header-description">描述</div>
                     <div class="panel-header-icon">图标</div>
                 </div>
                 <div class="panel-body">
-
+                    THE BODY THE BODY
                 </div>
             </div>
             <div class="panel">
-                <div class="panel-header">
+                <div class="panel-header" data-toggle="accordion">
                     <div class="panel-header-title">标题</div>
                     <div class="panel-header-description">描述</div>
                     <div class="panel-header-icon">图标</div>
                 </div>
                 <div class="panel-body">
-
+                    <div class="panel-content">
+                        THE BODY THE BODY
+                        THE BODY THE BODY
+                    </div>
+                    <div class="panel-actions">
+                        <button class="btn-accent">按钮</button>
+                        <button class="btn-primary">按钮</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -203,11 +211,7 @@
 
     <script src="./dist/js/masaga.min.js"></script>
     <script>
-        appendLoad(() => {
-            //  使用下拉菜单需要初始化
-            ddl.init();
-        });
-
+        
         function showLay() {
             const DD = mAlert.new({
                 content: 'CONTENT',

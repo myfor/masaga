@@ -1,4 +1,4 @@
-appendLoad(function() {
+appendLoad(function () {
     const list = document.querySelectorAll('textarea[autoRows]');
     if (list.length > 0) {
         for (let i = 0; i < list.length; i++) {
@@ -6,6 +6,10 @@ appendLoad(function() {
             autoTextarea(textarea);
         }
     }
+    //  初始化下拉菜单
+    ddl.init();
+    //  初始化折叠框
+    accordion.init();
 });
 
 /**
@@ -145,7 +149,7 @@ class ddl {
      */
     static _clickDDLFn = null;
     /**
-     * 是否已经初始化过下拉框，不需要重复初始化
+     * 是否已经初始化过下拉框，防止重复初始化
      */
     static _isInit = null;
     /**
@@ -160,7 +164,8 @@ class ddl {
         let newDDL = new ddl();
 
         //  绑定点击按钮展开事件
-        newDDL.bindDropDownListButtonClickFn();
+        if (!newDDL.bindDropDownListButtonClickFn())
+            return;
 
         //  点击背景时的关闭事件
         const CURRENT_CLICK = document.onclick;
@@ -181,6 +186,8 @@ class ddl {
      */
     bindDropDownListButtonClickFn() {
         const ddlList = document.querySelectorAll('[data-toggle=dropdown]');
+        if (ddlList.length === 0)
+            return false;
         for (let i = 0; i < ddlList.length; i++) {
             const BTN = ddlList[i];
             const P = BTN.parentNode;
@@ -200,6 +207,7 @@ class ddl {
                 c = c.nextElementSibling;
             }
         }
+        return true;
     }
     /**
      * 绑定点击背景的方法
@@ -229,6 +237,29 @@ class ddl {
     }
 }
 
+class accordion {
+    /**
+     * 点击折叠框头事件
+     */
+    static _clickHeader = null;
+    /**
+     * 是否已经初始化过折叠框，防止重复初始化
+     */
+    static _isInit = null;
+    /**
+     * 初始化折叠框
+     */
+    static init() {
+        if (!this._isInit)
+            this._isInit = true;
+        else
+            return;
+        const accordions = document.querySelectorAll('div[data-toggle=accordion]');
+        if (accordions.length === 0)
+            return;
+        
+    }
+}
 
 /**
  * 文本框根据输入内容自适应高度
