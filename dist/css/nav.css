@@ -1,0 +1,23 @@
+.nav {
+  height: 64px;
+  display: flex;
+  background-color: #3e5cdc;
+  box-sizing: border-box;
+  padding: 0 16px;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.nav > .title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav > .actions {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
