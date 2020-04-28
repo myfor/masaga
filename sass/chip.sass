@@ -1,0 +1,23 @@
+@import ./variables
+    
+.chip
+    cursor: default
+    font-weight: 600
+    padding: .1rem .8rem .1rem .8rem
+    margin: 0 .25rem
+    border-radius: 15px
+    background-color: $default-color
+    border-bottom: 2px solid transparentize($default-color, .5)
+
+.chip-primary
+    @extend .chip
+    color: $basic-color
+    background-color: $primary-color
+
+.chip-accent
+    @extend .chip-primary
+    background-color: $accent-color
+
+.chip-warn
+    @extend .chip-primary
+    background-color: $warn-color

@@ -1141,3 +1141,26 @@ html {
 .accordion > .panel-warn > .panel-header:active {
   background-color: rgba(244, 67, 54, 0.1);
 }
+
+.chip, .chip-primary, .chip-accent, .chip-warn {
+  cursor: default;
+  font-weight: 600;
+  padding: .1rem .8rem .1rem .8rem;
+  margin: 0 .25rem;
+  border-radius: 15px;
+  background-color: #e0e0e0;
+  border-bottom: 2px solid rgba(224, 224, 224, 0.5);
+}
+
+.chip-primary, .chip-accent, .chip-warn {
+  color: #fff;
+  background-color: #3e5cdc;
+}
+
+.chip-accent {
+  background-color: #ff4081;
+}
+
+.chip-warn {
+  background-color: #f44336;
+}

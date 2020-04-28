@@ -20,6 +20,7 @@ clone and open the index.html to see the result of the completed component on br
 - 多选框
 - 滑块开关
 - 折叠面板
+- 芯片
 
 ## Usage
 导入 js 文件和 css 文件
@@ -192,3 +193,12 @@ class="switch-warn"
 - **class="panel-primary"**
 - **class="panel-accent"**
 - **class="panel-warn"**
+
+### 芯片
+```html
+<span class="chip">芯片</span>
+<span class="chip-primary">芯片</span>
+<span class="chip-accent">芯片</span>
+<span class="chip-warn">芯片</span>
+```
+
