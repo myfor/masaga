@@ -247,7 +247,7 @@ $box-transition-s: .3s
         left: -48px
         border-radius: 15px
         width: 40px
-        height: 15px
+        height: 13px
         background-color: $disabled-color
         @extend %switch-transition
     &:checked+label::before
@@ -260,8 +260,8 @@ $box-transition-s: .3s
         top: 1px
         left: -52px
         border-radius: 15px
-        width: 24px
-        height: 24px
+        width: 22px
+        height: 22px
         background-color: $basic-color
         box-shadow: 0 3px 1px -1px rgba(0,0,0,.2)
         @extend %switch-transition
@@ -273,3 +273,30 @@ $box-transition-s: .3s
         @extend %switch-transition
     &:focus+label::after
         box-shadow: 0 0 0 10px transparentize($primary-color, .8)
+
+.switch-accent
+    @extend .switch-primary
+    &:checked+label::before
+        background: transparentize($accent-color, .3)
+    &+label:active::after
+        box-shadow: 0 0 0 10px transparentize($accent-color, .8)
+    &:checked+label::after
+        background-color: $accent-color
+        left: -30px
+        @extend %switch-transition
+    &:focus+label::after
+        box-shadow: 0 0 0 10px transparentize($accent-color, .8)
+
+.switch-warn
+    @extend .switch-primary
+    &:checked+label::before
+        background: transparentize($warn-color, .3)
+    &+label:active::after
+        box-shadow: 0 0 0 10px transparentize($warn-color, .8)
+    &:checked+label::after
+        background-color: $warn-color
+        left: -30px
+        @extend %switch-transition
+    &:focus+label::after
+        box-shadow: 0 0 0 10px transparentize($warn-color, .8)
+        

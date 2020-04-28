@@ -18,6 +18,7 @@ clone and open the index.html to see the result of the completed component on br
 - 下拉框
 - 单选框
 - 多选框
+- 滑块开关
 - 折叠面板
 
 ## Usage
@@ -151,6 +152,18 @@ class="form-radio-warn"
 ```html
 class="form-checkout-accent"
 class="form-checkout-warn"
+```
+
+### 滑块开关
+```html
+<input class="switch-primary" type="checkbox" id="switch-primary">
+<label for="switch-primary">开关</label>
+```
+滑块开关是包装了 `checkbox`，所以可以像 `checkbox` 一样使用
+样式默认是 primary，要使用其他样式请使用
+```html
+class="switch-accent"
+class="switch-warn"
 ```
 
 ### 折叠面板
