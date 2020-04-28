@@ -38,18 +38,13 @@ $btn-transition: background-color .2s
     background: none
     text-decoration: none
     transition: $btn-transition
-    /* Firefox 4 */
     -moz-transition: $btn-transition
-    /* Safari and Chrome */
     -webkit-transition: $btn-transition
-    /* Opera */
     -o-transition: $btn-transition
-
-    $hover-bakcground-color: rgba(0, 0, 0, 0.05)
     &:hover
-        background-color: $hover-bakcground-color
+        background-color: $basic-color-light
     &:active
-        background-color: opacify($hover-bakcground-color, 0.15)
+        background-color: $basic-color-dark
     &:focus
         outline: none
     &:disabled
@@ -57,23 +52,19 @@ $btn-transition: background-color .2s
 
 .btn-outline
     @extend .btn
-    border: $btn-border #c5c5c5 
+    border: $btn-border $basic-color-dark
     &:disabled
         @extend %btn-outline-disabled
 
 .btn-flat
+    background-color: $basic-color
     @extend .btn
-    background-color: $basic-color !important
-    &:active
-        background-color: $basic-color - #272727 !important
     &:disabled
         @extend %btn-flat-disabled
     
 .btn-raised
     @extend .btn, %raised
-    background-color: $basic-color !important
-    &:active
-        background-color: $basic-color - #272727 !important
+    background-color: $basic-color
     &:disabled
         @extend %btn-raised-disabled
 
@@ -82,9 +73,9 @@ $btn-transition: background-color .2s
     @extend .btn
     color: $primary-color
     &:hover
-        background-color: transparentize($primary-color, .90)
+        background-color: $primary-color-light
     &:active
-        background-color: transparentize($primary-color, .75)
+        background-color: $primary-color-dark
     &:disabled
         @extend %btn-disabled
     
@@ -99,9 +90,9 @@ $btn-transition: background-color .2s
     color: $basic-color
     background-color: $primary-color
     &:hover
-        background-color: $primary-color
+        background-color: $primary-color-dark
     &:active
-        background-color: transparentize($primary-color, .50)
+        background-color: $primary-color-light
     &:disabled
         @extend %btn-flat-disabled
 
@@ -115,9 +106,9 @@ $btn-transition: background-color .2s
     @extend .btn
     color: $accent-color
     &:hover
-        background-color: transparentize($accent-color, .90)
+        background-color: $accent-color-light
     &:active
-        background-color: transparentize($accent-color, .75)
+        background-color: $accent-color-dark
     &:disabled
         @extend %btn-disabled
     
@@ -132,9 +123,9 @@ $btn-transition: background-color .2s
     color: $basic-color
     background-color: $accent-color
     &:hover
-        background-color: $accent-color
+        background-color: $accent-color-dark
     &:active
-        background-color: transparentize($accent-color, .50)
+        background-color: $accent-color-light
     &:disabled
         @extend %btn-flat-disabled
 
@@ -148,9 +139,9 @@ $btn-transition: background-color .2s
     @extend .btn
     color: $warn-color
     &:hover
-        background-color: transparentize($warn-color, .90)
+        background-color: $warn-color-light
     &:active
-        background-color: transparentize($warn-color, .75)
+        background-color: $warn-color-dark
     &:disabled
         @extend %btn-disabled
     
@@ -165,9 +156,9 @@ $btn-transition: background-color .2s
     color: $basic-color
     background-color: $warn-color
     &:hover
-        background-color: $warn-color
+        background-color: $warn-color-dark
     &:active
-        background-color: transparentize($warn-color, .50)
+        background-color: $warn-color-light
     &:disabled
         @extend %btn-flat-disabled
 

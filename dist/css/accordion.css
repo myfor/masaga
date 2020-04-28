@@ -16,11 +16,11 @@
   flex-direction: row;
   cursor: pointer;
   padding: .7rem 1rem;
-  background-color: transparent;
+  background-color: #fff;
 }
 
 .accordion > .panel > .panel-header:active, .accordion > .panel-primary > .panel-header:active, .accordion > .panel-accent > .panel-header:active, .accordion > .panel-warn > .panel-header:active {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #e0e0e0;
   transition: background-color .2s;
   -moz-transition: background-color .2s;
   -webkit-transition: background-color .2s;
@@ -62,25 +62,25 @@
 }
 
 .accordion > .panel-primary > .panel-header {
-  color: #3e5cdc;
+  color: #4a5bc1;
 }
 
 .accordion > .panel-primary > .panel-header:active {
-  background-color: rgba(62, 92, 220, 0.1);
+  background-color: rgba(74, 91, 193, 0.1);
 }
 
 .accordion > .panel-accent > .panel-header {
-  color: #ff4081;
+  color: #f54984;
 }
 
 .accordion > .panel-accent > .panel-header:active {
-  background-color: rgba(255, 64, 129, 0.1);
+  background-color: rgba(245, 73, 132, 0.1);
 }
 
 .accordion > .panel-warn > .panel-header {
-  color: #f44336;
+  color: #ef594e;
 }
 
 .accordion > .panel-warn > .panel-header:active {
-  background-color: rgba(244, 67, 54, 0.1);
+  background-color: rgba(239, 89, 78, 0.1);
 }
