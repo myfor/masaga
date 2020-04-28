@@ -12,6 +12,7 @@ clone and open the index.html to see the result of the completed component on br
 - 全局方法
 - 字体
 - 按钮
+- 导航栏
 - 提示弹窗
 - 下拉菜单
 - 输入框
@@ -202,3 +203,20 @@ class="switch-warn"
 <span class="chip-warn">芯片</span>
 ```
 
+### 导航栏
+```html
+<div class="nav">
+    <span class="title">TITLE标题</span>
+    <span class="actions">
+        <button class="btn-flat-primary">按钮</button>
+    </span>
+</div>
+```
+若要是导航栏固定顶部，则使用
+```html
+<div class="nav-box">
+    <div class="nav-top">
+        <span class="title">固定顶部导航烂</span>
+    </div>
+</div>
+```
