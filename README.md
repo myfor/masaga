@@ -22,6 +22,7 @@ clone and open the index.html to see the result of the completed component on br
 - 滑块开关
 - 折叠面板
 - 芯片
+- 卡片
 
 ## Usage
 导入 js 文件和 css 文件
@@ -220,3 +221,24 @@ class="switch-warn"
     </div>
 </div>
 ```
+
+### 卡片
+```html
+<div class="card">
+    <div class="card-header">
+        <div class="title">
+            标题
+            <span class="subtitle">副标题</span>
+        </div>
+    </div>
+    <img src="https://wx1.sinaimg.cn/mw690/005PljWlgy1gcoh810yd4j31400u0n73.jpg" alt="图片">
+    <div class="card-description">
+        这是描述
+    </div>
+    <div class="card-actions">
+        <button class="btn-outline-primary ml3">按钮</button>
+        <button class="btn-warn">按钮</button>
+    </div>
+</div>
+```
+卡片的尺寸没有做限制，图片多大，卡片就会撑多大，若需要限制则要手动加上。

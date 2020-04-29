@@ -1,0 +1,30 @@
+@import ./variables
+    
+.card
+    display: flex
+    flex-direction: column
+    border-radius: 5px
+    padding: 16px
+    background-color: $basic-color
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12)
+    transition: box-shadow .3s cubic-bezier(.4,0,.2,1)
+    &>.card-header
+        display: flex
+        margin-bottom: 12px
+        &>.title
+            display: flex
+            flex-direction: column
+            font-size: 1.3rem
+            font-weight: 600
+            &>.subtitle
+                font-size: 1rem
+                font-weight: 100
+    &>img
+        width: calc(100% + 32px)
+        margin: 0 -16px 16px -16px
+    &>.card-description
+        display: block
+        margin-bottom: 16px
+    &>.card-actions
+        display: flex
+        flex-direction: row-reverse
