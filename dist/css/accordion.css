@@ -43,6 +43,7 @@
   max-height: 0px;
   padding: 0 .7rem;
   overflow: hidden;
+  background-color: #fff;
   transition: max-height .5s;
   -moz-transition: max-height .5s;
   -webkit-transition: max-height .5s;
