@@ -216,7 +216,7 @@ class="switch-warn"
 ```html
 <div class="nav-box">
     <div class="nav-top">
-        <span class="title">固定顶部导航烂</span>
+        <span class="title">固定顶部导航栏</span>
     </div>
 </div>
 ```

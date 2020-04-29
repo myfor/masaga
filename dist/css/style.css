@@ -463,7 +463,6 @@ html {
   left: 0;
   height: 100%;
   width: 100%;
-  transition: display .5s;
 }
 
 .alert-overlay-background {
@@ -476,7 +475,6 @@ html {
   right: 0;
   z-index: 1001;
   pointer-events: auto;
-  transition: display .5s;
 }
 
 .alert-wrapper {
