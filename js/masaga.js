@@ -254,8 +254,6 @@ class accordion {
             this._isInit = true;
         else
             return;
-        console.log('init accordion');
-
         const accordions = document.querySelectorAll('div[data-toggle=accordion]');
         if (accordions.length === 0)
             return;
