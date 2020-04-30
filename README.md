@@ -23,6 +23,7 @@ clone and open the index.html to see the result of the completed component on br
 - 折叠面板
 - 芯片
 - 卡片
+- 选项卡
 
 ## Usage
 导入 js 文件和 css 文件
@@ -242,3 +243,20 @@ class="switch-warn"
 </div>
 ```
 卡片的尺寸没有做限制，图片多大，卡片就会撑多大，若需要限制则要手动加上。
+
+### 选项卡
+```html
+<div class="tabs">
+    <ul>
+        <li>选项卡1</li>
+        <li>选项卡2</li>
+        <li class="actived">选项卡3</li>
+        <li>选项卡4</li>
+        <li>选项卡5</li>
+    </ul>
+    <div class="tabs-content">
+        内容
+    </div>
+</div>
+```
+在选项卡上加上 `actived` 可以使选项卡处于激活状态

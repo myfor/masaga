@@ -1,0 +1,51 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+.tabs > ul > li {
+  cursor: pointer;
+  padding: .6rem 1.3rem;
+  border: 1px solid #4a5bc1;
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #fff;
+  transition: all 280ms;
+}
+
+.tabs > ul > li:hover {
+  background-color: #cfd3ef;
+}
+
+.tabs > ul > li:active {
+  box-shadow: 0 4px 4px -9px rgba(0, 0, 0, 0.5), -4px -1px 8px -6px rgba(0, 0, 0, 0.5), 0px -7px 11px -5px rgba(0, 0, 0, 0.5);
+}
+
+.tabs > ul > .actived {
+  cursor: default;
+  color: #4a5bc1;
+  margin-bottom: -1px;
+  border-top: 4px solid #4a5bc1;
+  border-bottom: none;
+  box-shadow: 0 4px 4px -9px rgba(0, 0, 0, 0.5), -4px -1px 8px -6px rgba(0, 0, 0, 0.5), 0px -7px 11px -5px rgba(0, 0, 0, 0.5);
+}
+
+.tabs > ul > .actived:hover {
+  background-color: #fff;
+}
+
+.tabs > .tabs-content {
+  background-color: #fff;
+  border: 1px solid #4a5bc1;
+  padding: 1.1rem;
+}

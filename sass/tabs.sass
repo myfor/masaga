@@ -1,0 +1,40 @@
+@import ./variables
+
+$tabs-box-shadow: 0 4px 4px -9px rgba(0,0,0,0.5), -4px -1px 8px -6px rgba(0,0,0,0.5), 0px -7px 11px -5px rgba(0,0,0,0.5)
+ 
+.tabs
+    display: flex
+    flex-direction: column
+    &>ul
+        list-style: none
+        display: flex
+        flex-direction: row
+        padding-left: 0
+        margin-bottom: 0
+        z-index: 1
+        &>li
+            cursor: pointer
+            padding: .6rem 1.3rem
+            border: 1px solid $primary-color
+            border-bottom: none
+            border-top-left-radius: 5px
+            border-top-right-radius: 5px
+            background-color: $basic-color
+            transition: all 280ms
+            &:hover
+                background-color: $primary-color-light
+            &:active
+                box-shadow: $tabs-box-shadow
+        &>.actived
+            cursor: default
+            color: $primary-color
+            margin-bottom: -1px
+            border-top: 4px solid $primary-color
+            border-bottom: none
+            box-shadow: $tabs-box-shadow
+            &:hover
+                background-color: $basic-color
+    &>.tabs-content
+        background-color: $basic-color
+        border: 1px solid $primary-color
+        padding: 1.1rem
